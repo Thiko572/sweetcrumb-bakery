@@ -1,90 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding -->
     <meta charset="UTF-8">
+
+    <!-- Responsive design setup -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
     <title>SweetCrumb Bakery | Enquiry</title>
+
+    <!-- External stylesheet -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
+<!-- ================= HEADER SECTION ================= -->
 <header>
     <div class="navbar">
+
+        <!-- Website logo -->
         <div class="logo">Sweet<span>Crumb</span> Bakery</div>
+
+        <!-- Navigation menu -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+
                 <li><a href="about.html">About</a></li>
+
                 <li><a href="products.html">Products</a></li>
+
+                <!-- Active page -->
                 <li><a href="enquiry.html" class="active">Enquiry</a></li>
+
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
+<!-- ================= PAGE BANNER ================= -->
 <section class="page-banner">
+
+    <!-- Main page heading -->
     <h1>Make an Enquiry</h1>
+
+    <!-- Short page description -->
     <p>Tell us about your cake or biscuit order.</p>
 </section>
 
+<!-- ================= ENQUIRY SECTION ================= -->
 <section class="section">
+
+    <!-- Section introduction -->
     <p class="section-subtitle">
-        The assignment requires an enquiry form for product or service enquiries. :contentReference[oaicite:8]{index=8}
+        The assignment requires an enquiry form for product or service enquiries.
     </p>
 
+    <!-- Form container -->
     <div class="form-container">
+
+        <!-- Enquiry form -->
         <form action="#" method="post">
+
+            <!-- Full name field -->
             <label for="fullname">Full Name</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
 
+            <input 
+                type="text" 
+                id="fullname" 
+                name="fullname" 
+                placeholder="Enter your full name" 
+                required
+            >
+
+            <!-- Email address field -->
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
 
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Enter your email address" 
+                required
+            >
+
+            <!-- Phone number field -->
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
 
+            <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                placeholder="Enter your phone number" 
+                required
+            >
+
+            <!-- Product selection dropdown -->
             <label for="product">Product Type</label>
+
             <select id="product" name="product" required>
+
                 <option value="">-- Select Product --</option>
+
                 <option>Birthday Cake</option>
+
                 <option>Wedding Cake</option>
+
                 <option>Biscuits</option>
+
                 <option>Gluten-Free Option</option>
+
                 <option>Other</option>
             </select>
 
+            <!-- Event date field -->
             <label for="eventdate">Event Date</label>
-            <input type="date" id="eventdate" name="eventdate">
 
+            <input 
+                type="date" 
+                id="eventdate" 
+                name="eventdate"
+            >
+
+            <!-- Customer message field -->
             <label for="message">Order Details / Message</label>
-            <textarea id="message" name="message" placeholder="Tell us more about your request..." required></textarea>
 
-            <button type="submit" class="btn">Submit Enquiry</button>
+            <textarea 
+                id="message" 
+                name="message" 
+                placeholder="Tell us more about your request..." 
+                required
+            ></textarea>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn">
+                Submit Enquiry
+            </button>
         </form>
     </div>
 </section>
 
+<!-- ================= FOOTER SECTION ================= -->
 <footer>
     <div class="footer-content">
+
+        <!-- Bakery description -->
         <div>
             <h3>SweetCrumb Bakery</h3>
-            <p>Fresh cakes, biscuits, and custom orders for every celebration.</p>
+
+            <p>
+                Fresh cakes, biscuits, and custom orders for every celebration.
+            </p>
         </div>
+
+        <!-- Quick navigation links -->
         <div>
             <h3>Quick Links</h3>
+
             <p><a href="index.html">Home</a></p>
+
             <p><a href="about.html">About</a></p>
+
             <p><a href="products.html">Products</a></p>
+
             <p><a href="enquiry.html">Enquiry</a></p>
+
             <p><a href="contact.html">Contact</a></p>
         </div>
+
+        <!-- Contact details -->
         <div>
             <h3>Contact</h3>
+
             <p>Email: info@sweetcrumbbakery.co.za</p>
+
             <p>Phone: 012 345 6789</p>
         </div>
     </div>
+
+    <!-- Copyright section -->
     <div class="footer-bottom">
         <p>&copy; 2026 SweetCrumb Bakery. All Rights Reserved.</p>
     </div>
