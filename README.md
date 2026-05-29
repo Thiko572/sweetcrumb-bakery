@@ -115,6 +115,11 @@
 - `Added project setup instructions`
 - `Added changelog documentation`
 
+### v1.6.1 – README Documentation Update
+#### Commits:
+- `Updated README with project features`
+- `Added a final propopsal document`
+
 ## 📅 Project Status
 ✔ Completed
 
