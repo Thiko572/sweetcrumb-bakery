@@ -48,6 +48,73 @@
 
 ---
 
+---
+
+## 📝 Change Log
+
+### v1.0.0 – Initial Website Setup
+#### Commits:
+- `Initial project structure setup`
+- `Added navigation bar and footer across all pages`
+- `Created responsive homepage layout`
+- `Added bakery-themed colour scheme`
+- `Linked external CSS stylesheet`
+
+---
+
+### v1.1.0 – About Page Development
+#### Commits:
+- `Created About page structure`
+- `Added bakery story, mission, and vision`
+- `Implemented team section cards`
+- `Styled About page layout`
+
+---
+
+### v1.2.0 – Products Page Development
+#### Commits:
+- `Added products page with bakery items`
+- `Implemented product cards with images`
+- `Added pricing section for products`
+- `Styled products grid layout`
+
+---
+
+### v1.3.0 – Enquiry Page Development
+#### Commits:
+- `Created enquiry form page`
+- `Added customer input fields`
+- `Implemented product type dropdown`
+- `Styled enquiry form and submit button`
+
+---
+
+### v1.4.0 – Contact Page Development
+#### Commits:
+- `Added contact page structure`
+- `Included two bakery locations`
+- `Added operating hours section`
+- `Inserted map placeholder section`
+
+---
+
+### v1.5.0 – Code Documentation & Cleanup
+#### Commits:
+- `Added descriptive comments to HTML files`
+- `Improved code readability and structure`
+- `Standardized section formatting across pages`
+- `Cleaned up repeated layout patterns`
+
+---
+
+### v1.6.0 – README Documentation Update
+#### Commits:
+- `Updated README with project features`
+- `Added technologies used section`
+- `Added wireframes section`
+- `Added project setup instructions`
+- `Added changelog documentation`
+
 ## 📅 Project Status
 ✔ Completed
 
