@@ -50,6 +50,7 @@
 
 ---
 
+
 ## 📝 Change Log
 
 ### v1.0.0 – Initial Website Setup
@@ -115,13 +116,58 @@
 - `Added project setup instructions`
 - `Added changelog documentation`
 
-### v1.6.1 – README Documentation Update
+---
+
+### v1.6.1 – Final Documentation
 #### Commits:
 - `Updated README with project features`
-- `Added a final propopsal document`
+- `Added final proposal document`
+
+---
+
+### v1.7.0 – Product Search & Interactivity
+#### Commits:
+- `Implemented dynamic product search using jQuery`
+- `Added real-time filtering of products`
+- `Created product card hover animations`
+- `Added image zoom and shadow effects`
+- `Improved user experience on the Products page`
+
+---
+
+### v1.8.0 – Enquiry Form Validation
+#### Commits:
+- `Added HTML5 form validation`
+- `Restricted phone number field to digits only`
+- `Implemented success toast notifications`
+- `Added automatic form reset after submission`
+- `Prevented invalid form submissions`
+
+---
+
+### v1.9.0 – Contact Page Enhancements
+#### Commits:
+- `Embedded Google Maps using iframe`
+- `Added Braamfontein and Hatfield branch maps`
+- `Implemented general contact form`
+- `Added success modal for contact form submissions`
+- `Improved contact page user experience`
+
+---
+
+### v2.0.0 – Responsive Design & Security Enhancements
+#### Commits:
+- `Optimised website for mobile and tablet devices`
+- `Improved responsive navigation layout`
+- `Enhanced responsive product grids and forms`
+- `Added client-side validation and input sanitisation`
+- `Implemented browser security meta tags`
+- `Added content security policy recommendations`
+- `Improved accessibility and overall usability`
 
 ## 📅 Project Status
 ✔ Completed
+
 
 ---
 
