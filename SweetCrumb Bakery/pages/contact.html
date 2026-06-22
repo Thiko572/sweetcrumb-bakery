@@ -12,7 +12,237 @@
 
     <!-- External stylesheet -->
     <link rel="stylesheet" href="../css/styles.css">
+</head><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetCrumb Bakery | Contact</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">Sweet<span>Crumb</span> Bakery</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="page-banner">
+    <h1>Contact Us</h1>
+    <p>We would love to hear from you.</p>
+</section>
+
+<section class="section">
+  
+
+    <div class="contact-grid">
+        <div class="card">
+            <h3>Location 1</h3>
+            <p>12 Bakery Street, Braamfontein, Johannesburg</p>
+            <p><strong>Phone:</strong> 012 345 6789</p>
+            <p><strong>Email:</strong> info@sweetcrumbbakery.co.za</p>
+        </div>
+
+        <div class="card">
+            <h3>Location 2</h3>
+            <p>45 Market Road, Hatfield, Pretoria</p>
+            <p><strong>Phone:</strong> 011 987 6543</p>
+            <p><strong>Email:</strong> orders@sweetcrumbbakery.co.za</p>
+        </div>
+
+        <div class="card">
+            <h3>Operating Hours</h3>
+            <p>Monday - Friday: 08:00 - 18:00</p>
+            <p>Saturday: 08:00 - 15:00</p>
+            <p>Sunday: Closed</p>
+        </div>
+    </div>
+
+  <h2 class="section-title">Find Us</h2>
+
+<div class="contact-grid">
+
+    <div class="card">
+        <h3>Braamfontein Branch</h3>
+        <iframe
+            src="https://maps.google.com/maps?q=Braamfontein%20Johannesburg&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="250"
+            style="border:0;"
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <div class="card">
+        <h3>Hatfield Branch</h3>
+        <iframe
+            src="https://maps.google.com/maps?q=Hatfield%20Pretoria&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="250"
+            style="border:0;"
+            loading="lazy">
+        </iframe>
+    </div>
+
+</div>
+
+<h2 class="section-title">Send Us a Message</h2> 
+<p class="section-subtitle"> Have a question or special request? Send us a message and we'll get back to you as soon as possible. </p>
+ <div class="form-container"> 
+   <form id="contactForm">
+
+    <label for="fullName">Full Name</label>
+    <input
+        type="text"
+        id="fullName"
+        placeholder="Enter your full name"
+        minlength="3"
+        maxlength="50"
+        required
+    >
+
+    <label for="email">Email Address</label>
+    <input
+        type="email"
+        id="email"
+        placeholder="Enter your email address"
+        required
+    >
+
+    <label for="subject">Subject</label>
+    <input
+        type="text"
+        id="subject"
+        placeholder="Enter subject"
+        required
+    >
+
+    <label for="message">Message</label>
+    <textarea
+        id="message"
+        placeholder="Type your message here..."
+        required
+    ></textarea>
+
+    <button type="submit" class="btn">
+        Send Message
+    </button>
+
+</form>
+    
+    </div>
+
+
+</section>
+
+<!-- Success Modal -->
+<div id="contactSuccess" class="success-modal">
+    <span class="success-icon">✔</span>
+
+    <div>
+        <h3>Message Sent Successfully!</h3>
+
+        <p>
+            Thank you for contacting SweetCrumb Bakery.
+            We have received your message and will get back to you soon.
+        </p>
+    </div>
+
+    <span class="close-success">&times;</span>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div>
+            <h3>SweetCrumb Bakery</h3>
+            <p>Fresh cakes, biscuits, and custom orders for every celebration.</p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="about.html">About</a></p>
+            <p><a href="products.html">Products</a></p>
+            <p><a href="enquiry.html">Enquiry</a></p>
+            <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <p>Email: info@sweetcrumbbakery.co.za</p>
+            <p>Phone: 012 345 6789</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 SweetCrumb Bakery. All Rights Reserved.</p>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+$(document).ready(function () {
+
+    $("#contactForm").submit(function (e) {
+
+        e.preventDefault();
+
+        const fullName =
+            $("#fullName").val().trim();
+
+        const email =
+            $("#email").val().trim();
+
+        const subject =
+            $("#subject").val().trim();
+
+        const message =
+            $("#message").val().trim();
+
+        if (
+            fullName === "" ||
+            email === "" ||
+            subject === "" ||
+            message === ""
+        ) {
+            return;
+        }
+
+        $("#contactSuccess")
+            .addClass("show")
+            .hide()
+            .fadeIn();
+
+        this.reset();
+
+        setTimeout(function () {
+            $("#contactSuccess")
+                .fadeOut(function () {
+                    $(this).removeClass("show");
+                });
+        }, 5000);
+
+    });
+
+    $(".close-success").click(function () {
+        $("#contactSuccess")
+            .fadeOut(function () {
+                $(this).removeClass("show");
+            });
+    });
+
+});
+</script>
+
+</body>
+</html>
 <body>
 
 <!-- ================= HEADER SECTION ================= -->
