@@ -165,6 +165,10 @@
 - `Added content security policy recommendations`
 - `Improved accessibility and overall usability`
 
+### v2.0.1 – Responsive Design & Security Enhancements
+#### Commits:
+- `Products page fix issue on production`
+
 ## 📅 Project Status
 ✔ Completed
 
