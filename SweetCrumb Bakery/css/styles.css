@@ -65,7 +65,7 @@ nav ul li a.active {
     background:
         linear-gradient(rgba(0, 0, 0, 0.35),
             rgba(0, 0, 0, 0.35)),
-        url('../images/hero.jpg') center/cover no-repeat;
+        url('../images/cake1.png') center/cover no-repeat;
 
     display: flex;
     justify-content: center;
