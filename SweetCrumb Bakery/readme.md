@@ -168,6 +168,10 @@
 ### v2.0.1 – Responsive Design & Security Enhancements
 #### Commits:
 - `Products page fix issue on production`
+### v2.0.2 – Responsive Design & Security Enhancements
+#### Commits:
+- `Enquiry page fix issue on production`
+
 
 ## 📅 Project Status
 ✔ Completed
