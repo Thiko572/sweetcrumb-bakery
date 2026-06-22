@@ -1,12 +1,19 @@
+/* ================= GLOBAL STYLES ================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-    body {
+body {
     background-color: antiquewhite;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
+
+/* ================= HEADER ================= */
+
 header {
     background-color: #D4A373;
     color: white;
@@ -31,6 +38,8 @@ header {
     color: #5c3b28;
 }
 
+/* ================= NAVIGATION ================= */
+
 nav ul {
     list-style: none;
     display: flex;
@@ -49,10 +58,15 @@ nav ul li a.active {
     color: #5c3b28;
 }
 
+/* ================= HERO SECTION ================= */
+
 .hero {
     height: 85vh;
-    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-                url('../images/hero.jpg') center/cover no-repeat;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)),
+        url('../images/hero.jpg') center/cover no-repeat;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,6 +85,8 @@ nav ul li a.active {
     margin-bottom: 25px;
 }
 
+/* ================= BUTTONS ================= */
+
 .btn {
     display: inline-block;
     background-color: #CC7B4E;
@@ -78,15 +94,17 @@ nav ul li a.active {
     padding: 12px 22px;
     margin: 8px;
     text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn:hover {
     background-color: #b5663c;
 }
+
+/* ================= GENERAL SECTIONS ================= */
 
 .section {
     width: 90%;
@@ -108,6 +126,8 @@ nav ul li a.active {
     color: #555;
 }
 
+/* ================= GRID LAYOUTS ================= */
+
 .features,
 .products-grid,
 .team-grid,
@@ -117,22 +137,63 @@ nav ul li a.active {
     gap: 25px;
 }
 
+/* ================= CARDS ================= */
+
 .card {
     background-color: white;
     border-radius: 12px;
     padding: 25px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-6px);
+css
+/* ================= PRODUCT CARD HOVER EFFECT ================= */
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s ease,
+        box-shadow 0.35s ease,
+        opacity 0.35s ease;
 }
 
-.card h3 {
+/* Dim all products slightly when hovering over the grid */
+.products-grid:hover .product-card {
+    opacity: 0.7;
+}
+
+/* Enlarge only the hovered product */
+.products-grid .product-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+    opacity: 1;
+    z-index: 10;
+}
+
+/* Make the image zoom slightly too */
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.35s ease;
+}
+
+/* Image enlarges with the card */
+.product-card:hover img {
+    transform: scale(1.08);
+}
+
+ .card h3 {
     margin-bottom: 12px;
     color: #CC7B4E;
 }
+
+/* ================= PRODUCT IMAGES ================= */
 
 .product-card img {
     width: 100%;
@@ -149,6 +210,8 @@ nav ul li a.active {
     margin-top: 10px;
 }
 
+/* ================= PAGE BANNER ================= */
+
 .about-banner,
 .page-banner {
     background-color: #CC7B4E;
@@ -162,11 +225,13 @@ nav ul li a.active {
     margin-bottom: 10px;
 }
 
+/* ================= FORM ================= */
+
 .form-container {
     background-color: white;
     padding: 35px;
     border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
     max-width: 800px;
     margin: auto;
 }
@@ -194,6 +259,74 @@ form textarea {
     resize: vertical;
 }
 
+/* ================= GOOGLE MAP ================= */
+
+.map-container {
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* ================= SUCCESS TOAST ================= */
+
+.success-modal {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 420px;
+    max-width: 90%;
+
+    background: #28a745;
+    color: white;
+
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+    z-index: 9999;
+}
+
+.success-modal.show {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.success-icon {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.success-modal h3 {
+    margin: 0 0 5px;
+}
+
+.success-modal p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.close-success {
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-success:hover {
+    opacity: 0.8;
+}
+
+/* ================= FOOTER ================= */
+
 footer {
     background-color: #D4A373;
     color: white;
@@ -205,8 +338,11 @@ footer {
     width: 90%;
     max-width: 1200px;
     margin: auto;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
     gap: 25px;
 }
 
@@ -222,20 +358,14 @@ footer {
 .footer-bottom {
     text-align: center;
     margin-top: 25px;
-    border-top: 1px solid rgba(255,255,255,0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     padding-top: 15px;
 }
 
-.map-placeholder {
-    background-color: #f1e4d0;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    color: #5c3b28;
-    font-weight: bold;
-}
+/* ================= RESPONSIVE DESIGN ================= */
 
 @media (max-width: 768px) {
+
     .navbar {
         flex-direction: column;
         gap: 15px;
@@ -254,5 +384,182 @@ footer {
         font-size: 32px;
     }
 
+    .success-modal {
+        width: 90%;
+        right: 5%;
+    }
 
+
+    /* ================= PRODUCT SEARCH ================= */
+
+        .search-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        #productSearch {
+            width: 80%;
+            max-width: 900px;
+            padding: 16px 25px;
+            border: 2px solid #D4A373;
+            border-radius: 50px;
+            font-size: 18px;
+            background-color: white;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        #productSearch:focus {
+            border-color: #CC7B4E;
+            box-shadow: 0 0 10px rgba(204, 123, 78, 0.3);
+        }
+
+    }
+
+
+
+    /* ================= MOBILE RESPONSIVENESS ================= */
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 768px) {
+
+        /* ===== HEADER & NAVBAR ===== */
+        header {
+            padding: 15px 20px;
+        }
+
+        .navbar {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        nav ul {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 8px 12px;
+            font-size: 15px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            height: auto;
+            min-height: 70vh;
+            padding: 80px 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 38px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 12px auto;
+            text-align: center;
+        }
+
+        /* ===== PAGE SECTIONS ===== */
+        .section {
+            width: 95%;
+            margin: 40px auto;
+        }
+
+        .section-title {
+            font-size: 28px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            padding: 0 10px;
+        }
+
+        /* ===== GRID LAYOUTS ===== */
+        .features,
+        .products-grid,
+        .team-grid,
+        .contact-grid,
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        /* ===== PRODUCT CARDS ===== */
+        .product-card {
+            width: 100%;
+        }
+
+        .product-card img {
+            height: 250px;
+        }
+
+        /* ===== FORMS ===== */
+        .form-container {
+            width: 100%;
+            padding: 25px;
+        }
+
+        form input,
+        form select,
+        form textarea,
+        .btn {
+            width: 100%;
+        }
+
+        /* ===== PAGE BANNER ===== */
+        .page-banner {
+            padding: 50px 20px;
+        }
+
+        .page-banner h1 {
+            font-size: 32px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer-content {
+            text-align: center;
+        }
+
+        /* ===== GOOGLE MAP ===== */
+        .map-container iframe {
+            height: 300px;
+        }
+
+        /* ===== SUCCESS POPUP ===== */
+        .success-modal {
+            width: 90%;
+            top: 15px;
+            left: 5%;
+            right: 5%;
+        }
+
+
+        
+
+
+    
 }
